@@ -1,0 +1,83 @@
+map:song key:list value:
+[
+map[
+albumid:1.458791e+06 
+albummid:003RMaRI1iFoYd 
+albumname:周杰伦的床边故事 
+albumname_hilight:<span class="c_tx_highlight">周杰伦</span>的床边故事 
+alertid:23 
+chinesesinger:0 
+docid:7065911643897223382 
+grp:[] 
+interval:215 
+
+isonly:1 
+lyric: 
+lyric_hilight: 
+msgid:14 
+nt:1.967005487e+09 
+pay:map[
+	payalbum:1 
+	payalbumprice:2000 
+	paydownload:1 
+	payinfo:1 
+	payplay:0 
+	paytrackmouth:1 
+	paytrackprice:200
+	] 
+preview:map[
+	trybegin:65138 
+	tryend:85421 
+	trysize:0
+	] 
+pubtime:1.4666976e+09 
+pure:0 
+singer:[
+		map[
+			id:4558 
+			mid:0025NhlN2yWrP4 
+			name:周杰伦 
+			name_hilight:<span class="c_tx_highlight">周杰伦</span>
+		]
+	] 
+size128:3.443771e+06 
+size320:8.608939e+06 
+sizeape:2.4929083e+07 
+sizeflac:2.4971563e+07 
+sizeogg:5.001304e+06 
+songid:1.07192078e+08 
+songmid:003OUlho2HcRHC 
+songname:告白气球 
+songname_hilight:告白气球 
+stream:1 
+switch:636675 
+t:1 
+tag:0 
+type:0 
+ver:0 
+vid:
+] 
+
+
+
+
+map[albumid:33021 albummid:002eFUFm2XYZ7z albumname:我很忙 albumname_hilight:我很忙 alertid:23 chinesesinger:0 docid:4953153690890266244 grp:[] interval:239 isonly:1 lyric: lyric_hilight: msgid:14 nt:6.22528639e+08 pay:map[payalbum:0 payalbumprice:0 paydownload:1 payinfo:1 payplay:0 paytrackmouth:1 paytrackprice:200] preview:map[trybegin:57191 tryend:90651 trysize:0] pubtime:1.1939328e+09 pure:0 singer:[map[id:4558 mid:0025NhlN2yWrP4 name:周杰伦 name_hilight:<span class="c_tx_highlight">周杰伦</span>]] size128:3.83649e+06 size320:9.573872e+06 sizeape:2.5541938e+07 sizeflac:2.6237796e+07 sizeogg:5.414428e+06 songid:410316 songmid:002qU5aY3Qu24y songname:青花瓷 songname_hilight:青花瓷 stream:1 switch:636675 t:1 tag:0 type:0 ver:0 vid:]
+]
+
+//下载链接
+{
+"code":0,
+"sip":["http://dl.stream.qqmusic.qq.com/","http://isure.stream.qqmusic.qq.com/"] , 
+"thirdip":["http://thirdparty.gtimg.com/abcd1234/", "http://thirdparty.gtimg.com/abcd1234/"],
+"testfile2g":"C100003mAan70zUy5O.m4a",
+"testfilewifi":"C100003mAan70zUy5O.m4a",
+"key": "78CE4186667F26EEE9B643BB6C74F6F400B620A8B358658FFDF6C2E01AD71CDDFFB79CBA6CCBA16C2EA7DE0815D3F59F82889EABDB3C874D"
+}
+
+http://dl.stream.qqmusic.qq.com/M800002l8JN71d2Dxy.mp3?vkey=20E9777EF6A98EDAF30868BBA34A2AA106EBAC80DD358192EF90B0F040C3367964D2AAC18FFAC6CFA350D5B05209F36364FB32D936D2DE60&guid=1310449326&fromtag=1
+http://dl.stream.qqmusic.qq.com/M500002l8JN71d2Dxy.mp3?vkey=20E9777EF6A98EDAF30868BBA34A2AA106EBAC80DD358192EF90B0F040C3367964D2AAC18FFAC6CFA350D5B05209F36364FB32D936D2DE60&guid=1310449326&fromtag=1
+http://dl.stream.qqmusic.qq.com/C400002l8JN71d2Dxy.mp3?vkey=20E9777EF6A98EDAF30868BBA34A2AA106EBAC80DD358192EF90B0F040C3367964D2AAC18FFAC6CFA350D5B05209F36364FB32D936D2DE60&guid=1310449326&fromtag=1
+
+http://isure.stream.qqmusic.qq.com/M500002l8JN71d2Dxy.mp3?vkey=20E9777EF6A98EDAF30868BBA34A2AA106EBAC80DD358192EF90B0F040C3367964D2AAC18FFAC6CFA350D5B05209F36364FB32D936D2DE60&guid=1310449326&fromtag=1
+http://thirdparty.gtimg.com/abcd1234/M500002l8JN71d2Dxy.mp3?vkey=20E9777EF6A98EDAF30868BBA34A2AA106EBAC80DD358192EF90B0F040C3367964D2AAC18FFAC6CFA350D5B05209F36364FB32D936D2DE60&guid=1310449326&fromtag=1
+http://thirdparty.gtimg.com/abcd1234/M500002l8JN71d2Dxy.mp3?vkey=20E9777EF6A98EDAF30868BBA34A2AA106EBAC80DD358192EF90B0F040C3367964D2AAC18FFAC6CFA350D5B05209F36364FB32D936D2DE60&guid=1310449326&fromtag=1
