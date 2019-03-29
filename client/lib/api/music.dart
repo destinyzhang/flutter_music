@@ -52,7 +52,7 @@ class MusicApi {
   static String _baseUrl = "http://192.168.1.42:8080/api/music";
 
  //static String _baseUrl = "http://192.168.199.171:8080/api/music";
-  static String _gitAddress = "https://gitee.com/dylove/music_server/raw/master/address";
+  static String _gitAddress = "https://raw.githubusercontent.com/destinyzhang/flutter_music/master/server/address";
   static const int _connectTimeout = 20000;
   static const int _receiveTimeout = 20000;
 
