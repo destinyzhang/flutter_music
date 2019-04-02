@@ -1,0 +1,143 @@
+//https://c.y.qq.com/soso/fcgi-bin/client_search_cp?ct=24&qqmusic_ver=1298&new_json=1&remoteplace=txt.yqq.song&searchid=68659742391978063&t=0&aggr=1&cr=1&catZhida=1&lossless=0&flag_qc=0&p=1&n=10&w=four%20seasons&g_tk=209450565&loginUin=569964924&hostUin=0&format=json&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq.json&needNewCode=0
+{"code":0,
+    "data":
+    {
+        "keyword":"four seasons",
+        "priority":0,
+        "qc":[],
+        "semantic":{
+            "curnum":0,
+            "curpage":1,
+            "list":[],
+            "totalnum":0
+            },
+            "song":{
+                "curnum":15,
+                "curpage":1,
+                "list":[
+                    {
+                        "action":
+                        {
+                            "alert":7,
+                            "icons":0,
+                            "msg":13,
+                            "switch":590081
+                        },
+                        "album":
+                        {
+                            "id":6474887,
+                            "mid":"0020YSB00ixz06",
+                            "name":"Four Seasons - Single",
+                            "subtitle":"",
+                            "title":"Four Seasons - Single",
+                            "title_hilight":"<em>Four Seasons </em>-<em> S</em>i<em>n</em>gl<em>e</em>"
+                        },
+                        "chinesesinger":0,
+                        "desc":"",
+                        "desc_hilight":"",
+                        "docid":"15638346038669353063",
+                        "file":
+                        {
+                            "b_30s":0,
+                            "e_30s":0,
+                            "media_mid":"104PGxdX46ztji",
+                            "size_128":3012905,
+                            "size_320":7531880,
+                            "size_aac":4562963,
+                            "size_ape":0,
+                            "size_dts":0,
+                            "size_flac":24297054,
+                            "size_ogg":4488964,
+                            "size_try":0,
+                            "strMediaMid":"104PGxdX46ztji",
+                            "try_begin":55839,
+                            "try_end":82617
+                        },
+                        "fnote":4009,
+                        "genre":1,
+                        "grp":[],
+                        "id":230432837,
+                        "index_album":2,
+                        "index_cd":0,
+                        "interval":188,
+                        "isonly":1,
+                        "ksong":
+                        {
+                            "id":0,
+                            "mid":""
+                        },
+                        "language":4,
+                        "lyric":"",
+                        "lyric_hilight": "",
+                        "mid":"004PGxdX46ztji",
+                        "mv":
+                        {
+                            "id":1516067,
+                            "vid":"s0030pxydg2"
+                        },
+                        "name":"사계 (Four Seasons)",
+                        "newStatus":1,
+                        "nt":1863315853,
+                        "pay":
+                        {
+                            "pay_down":1,
+                            "pay_month":0,
+                            "pay_play":1,
+                            "pay_status":0,
+                            "price_album":600,
+                            "price_track":0,
+                            "time_free":0},
+                            "pure":0,
+                            "singer":[
+                                {
+                                    "id":12967,
+                                    "mid":"000Dt3oh13pg4o",
+                                    "name":"태연",
+                                    "title":"태연 (太妍)",
+                                    "title_hilight":"태연 (太妍)",
+                                    "type":1,
+                                    "uin":0
+                                }
+                            ],
+                            "status":0,
+                            "subtitle":"",
+                            "t":1,
+                            "tag":10,
+                            "time_public":"2019-03-24",
+                            "title":"사계 (Four Seasons) (四季)",
+                            "title_hilight":"사계<em> </em>(<em>Four Seasons</em>) (四季)",
+                            "type":0,
+                            "url":"http://stream10.qqmusic.qq.com/230432837.wma",
+                            "ver":0,
+                            "volume":{
+                                "gain":-9.925000190734863,
+                                "lra":5.978000164031982,
+                                "peak":1.0
+                            }
+                        }
+                    ]
+                    ,"totalnum":440
+                },
+                "tab":0,
+                "taglist":[],
+                "totaltime":0,
+                "zhida":
+                {
+                    "type":8,
+                    "zhida_mv":
+                    {
+                        "desc":"태연 (太妍)",
+                        "id":1516067,
+                        "pic":"http://y.gtimg.cn/music/photo_new/T015R640x360M101001mADKv2Y5dPB.jpg",
+                        "publish_date":"2019-03-27",
+                        "title":"사계 (Four Seasons) (Live At 's...one TAEYEON CONCERT)",
+                        "vid":"s0030pxydg2"
+                    }
+                }
+    },
+    "message":"",
+    "notice":"",
+    "subcode":0,
+    "time":1554195524,
+    "tips":""
+}
