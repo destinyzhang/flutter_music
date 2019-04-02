@@ -5,9 +5,11 @@ import 'package:dl_music/pages/toast.dart';
 import 'package:dl_music/api/music.dart';
 import 'package:dl_music/storage/unit.dart';
 import 'package:dl_music/storage/storage.song.dart';
+import 'package:dl_widget/dl_draglist.dart';
 
 class DownloadPage extends StatefulWidget {
   DownloadPage({Key key}) : super(key: key);
+
   @override
   _DownloadPageState createState() => _DownloadPageState();
 }
@@ -35,76 +37,57 @@ class _DownloadPageState extends State<DownloadPage> {
   }
 
   PopupMenuItem<int> _buildPopupMenuItem(String text, int id) {
-    return   PopupMenuItem<int>(
-        value: id,
-        child: Text(text)
-    );
+    return PopupMenuItem<int>(value: id, child: Text(text));
   }
 
-  void _onPopupMenuItemSelected(int value, Song song) {
-    switch (value) {
-      case 0:
-        {
-          if (Downloader.isDownloadSong(song))
-            return;
-          if (SongStorage.songDownload.insertTo(
-              song, Downloader.downloading ? 1 : 0))
-            setState(() {});
-        }
-        break;
-      case 1:
-        {
-          ToastPage.showAlertDialog(
-              context, "删除${song.name}", okText: "删除", okCallback: () {
-            if (!Downloader.isDownloadSong(song)) {
-              if (SongStorage.songDownload.remove(song))
-                setState(() {});
-            }
-          });
-        }
-        break;
-    }
+  void _onPopupMenuItemSelected(Song song) {
+    ToastPage.showAlertDialog(context, "删除${song.name}", okText: "删除",
+        okCallback: () {
+      if (!Downloader.isDownloadSong(song)) {
+        if (SongStorage.songDownload.remove(song)) setState(() {});
+      }
+    });
   }
 
-  Widget _listBuilder(BuildContext context, int index) {
+  Data2Widget<Song> _listBuilder(BuildContext context, int index) {
     Song song = SongStorage.songDownload.getSong(index);
-    if (song == null)
-      return null;
+    if (song == null) return null;
+    Widget widget;
     if (Downloader.isDownloadSong(song)) {
-      return ListTile(
-        title: Text(
-            song.name),
+      widget = ListTile(
+        title: Text(song.name),
         selected: true,
         subtitle: Text("${song.singer} ${song.getTime()} ${song.getSize()}"),
-        trailing:   Stack(
+        trailing: Stack(
           children: [
-              CircularProgressIndicator(
+            CircularProgressIndicator(
               value: 1.0,
-              valueColor:   AlwaysStoppedAnimation(
-                  Unit.instance.backColorTwo),
+              valueColor: AlwaysStoppedAnimation(Unit.instance.backColorTwo),
             ),
-              CircularProgressIndicator(
+            CircularProgressIndicator(
               value: Downloader.downProgress,
-              valueColor:   AlwaysStoppedAnimation(Unit.instance.playerColor),
+              valueColor: AlwaysStoppedAnimation(Unit.instance.playerColor),
             ),
           ],
         ),
       );
+    } else {
+      widget = ListTile(
+        title: Text(song.name),
+        subtitle: Text("${song.singer} ${song.getTime()} ${song.getSize()}"),
+        trailing: PopupMenuButton(
+          tooltip: '下拉菜单',
+          onSelected: (int value) => _onPopupMenuItemSelected(song),
+          itemBuilder: (BuildContext context) {
+            return <PopupMenuItem<int>>[
+              _buildPopupMenuItem("删除", 0),
+            ];
+          },
+          icon: Icon(Icons.menu),
+        ),
+      );
     }
-    return ListTile(
-      title: Text(
-          song.name),
-      subtitle: Text("${song.singer} ${song.getTime()} ${song.getSize()}"),
-      trailing: PopupMenuButton(
-        tooltip: '下拉菜单',
-        onSelected: (int value) => _onPopupMenuItemSelected(value, song),
-        itemBuilder: (BuildContext context) {
-          return <PopupMenuItem<int>>[
-            _buildPopupMenuItem("优先下载", 0),
-            _buildPopupMenuItem("删除", 1),
-          ];
-        }, icon: Icon(Icons.menu),),
-    );
+    return Data2Widget<Song>(data: song, widget: widget);
   }
 
   void _onBottomNavigationBarTap(int value) {
@@ -117,8 +100,8 @@ class _DownloadPageState extends State<DownloadPage> {
         });
         break;
       case 1:
-        ToastPage.showAlertDialog(
-            context, "确定清空下载列表？", okText: "清空", okCallback: () {
+        ToastPage.showAlertDialog(context, "确定清空下载列表？", okText: "清空",
+            okCallback: () {
           setState(() {
             Downloader.cancelDownload();
             SongStorage.songDownload.clear();
@@ -162,8 +145,12 @@ class _DownloadPageState extends State<DownloadPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.builder(
-        itemBuilder: _listBuilder,
+      body: DragList<Song>.buildFromBuilder(
+        widgetBuilder: _listBuilder,
+        updateDragDataIdx: (data) =>
+            SongStorage.songDownload.songs.indexWhere((s) => s == data),
+        onDragEnd: (from, to) => SongStorage.songDownload
+            .insertTo(SongStorage.songDownload.getSong(from), to),
       ),
       bottomNavigationBar: _buildBottomNavigationBar(),
     );

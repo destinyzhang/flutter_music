@@ -86,25 +86,4 @@ class SongSheet extends ISongProvider {
       return null;
     return songs[index];
   }
-
-  void save(String file) async {
-    try {
-      await Storage.saveAppFile(file,
-          jsonEncode(this.toJson()));
-    } catch (e) {}
-  }
-
-  void load(String file) async {
-    String json = await Storage.loadAppFile(file);
-    if (json == "") return;
-    try {
-      this.songs = SongSheet
-          .fromJson(jsonDecode(json))
-          .songs;
-    } catch (e) {
-
-    }
-    if (this.songs == null)
-      this.songs =   List<String>();
-  }
 }

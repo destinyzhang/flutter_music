@@ -15,7 +15,7 @@ class Downloader {
   static CancelToken _cancelToken =   CancelToken();
   static double _count = 0;
   static double _total = 0;
-  static double _countflag = 0;
+  static double _countFlag = 0;
   static get downloading => _currentDownload != null;
 
   static get downProgress {
@@ -50,8 +50,8 @@ class Downloader {
     _count = count.toDouble();
     _total = total.toDouble();
     //避免平凡更新
-    if (_count - _countflag >= total / 10) {
-      _countflag = _count;
+    if (_count - _countFlag >= total / 10) {
+      _countFlag = _count;
       _notifyListener(0, null, null, null);
     }
   }
@@ -127,7 +127,7 @@ class Downloader {
         }
       }
     }
-    _countflag = _count = _total = 0;
+    _countFlag = _count = _total = 0;
     if (_currentDownload != null) {
       SongStorage.songDownload.remove(_currentDownload);
       if (result != ErrCode.ErrCodeOk)
