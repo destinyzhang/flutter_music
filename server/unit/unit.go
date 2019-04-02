@@ -29,6 +29,7 @@ func CheckURLRequest(referer string, url string) bool {
 			beegoLog.Error("unit CheckURLRequest url:" + url + "error:" + err.Error())
 			return false
 		}
+		defer resp.Body.Close()
 		return resp.StatusCode == 200
 	}
 	return false
@@ -42,6 +43,7 @@ func HTTPRequest(referer string, url string) []byte {
 			beegoLog.Error("unit HTTPRequest url:" + url + "error:" + err2.Error())
 			return nil
 		}
+		defer resp.Body.Close()
 		bytes, err3 := ioutil.ReadAll(resp.Body)
 		if err3 != nil {
 			beegoLog.Error("unit HTTPRequest  ReadAll url:" + url + "error:" + err3.Error())
