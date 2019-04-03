@@ -28,6 +28,7 @@ dependencies:
   dl_widget:
     git:
       url: git://github.com/destinyzhang/dl_widget.git
+      ref: ^1.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
